@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QueueSmart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">QueueSmart</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="card narrow">
+      <h1>Join a queue</h1>
+      <p class="subtitle">Pick a service and get your live position — no more standing in line.</p>
+
+      <form id="join-form">
+        <label for="service-select">Service</label>
+        <select id="service-select"></select>
+
+        <label for="name-input">Your name</label>
+        <input type="text" id="name-input" placeholder="e.g. Sneha" />
+
+        <p class="error-text" id="error-text" hidden></p>
+
+        <button type="submit" id="join-btn">Join queue</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>QueueSmart Lite — live queue &amp; wait-time estimation demo</footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
