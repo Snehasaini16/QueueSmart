@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — QueueSmart</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">QueueSmart</a>
+      <a href="admin.html" class="admin-link">Admin</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="admin-controls">
+      <label for="service-select" style="margin:0;">Service</label>
+      <select id="service-select"></select>
+      <span class="muted" id="avg-time-label"></span>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h2 style="font-size:0.9rem;color:var(--muted);margin-top:0;">Now serving</h2>
+        <div id="serving-content">
+          <p class="muted">Loading...</p>
+        </div>
+        <button id="call-next-btn" style="margin-top:16px;">Call next</button>
+      </div>
+
+      <div class="card">
+        <h2 style="font-size:0.9rem;color:var(--muted);margin-top:0;" id="waiting-title">Waiting</h2>
+        <ul class="queue-list" id="waiting-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>QueueSmart Lite — live queue &amp; wait-time estimation demo</footer>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
